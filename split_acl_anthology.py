@@ -1,9 +1,11 @@
 import os
+import collections 
 
-# url = 'https://aclanthology.org/anthology.bib.gz'
-# os.system(f'rm anthology.bib; rm anthology.bib.gz; wget {url}; gunzip anthology.bib.gz')
+# Download ACL Anthology bib file and unzip it
+url = 'https://aclanthology.org/anthology.bib.gz'
+os.system(f'rm anthology.bib; rm anthology.bib.gz; wget {url}; gunzip anthology.bib.gz')
 
-
+# Read and split
 with open('anthology.bib') as f:
     text = f.read()
 
@@ -15,8 +17,6 @@ text = text.replace('\n\n', '\n')
 
 text = text.replace('}\n@', '}@@@###===@')
 items = text.split('@@@###===')
-
-import collections
 
 final_split = collections.defaultdict(list)
 years = [str(x) for x in range(2030, 1950, -1)]
@@ -34,6 +34,7 @@ for item in items:
         print(item)
         print('-' * 120)
 
+# Save by year group
 year_groups = [
     (1950, 2000),
     (2000, 2005),
