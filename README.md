@@ -1,7 +1,7 @@
-# Split of ACL Anthology bib files for Overleaf
+# Compact ACL Anthology bib files for Overleaf
 
 Due to the limit of Overleaf's project file size of 50MB, using the ACL Anthology bib file is not feasible anymore (it is > 60MB).
-This simple repo split the ACL Anthology bibfile into smaller files so you can remove unnecessary bibs while preserve the handy of just copy the bib ID from ACL anthology's website.
+This simple repo splits the ACL Anthology bib file into smaller files so you can remove unnecessary bibs while preserving the handy of just copying the bib ID from ACL Anthology's website.
 
 ## Usage
 
@@ -19,7 +19,6 @@ Step 4: Add bib files to the main tex.
 ```
 \bibliography{bibs/anthology.2016.2018,bibs/anthology.2018.2020,bibs/anthology.2020.2022,bibs/anthology.2022.2024,bibs/anthology.2024.2026}
 ```
-
 
 ## Customization
 
